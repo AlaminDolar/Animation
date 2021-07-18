@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation</title>
+    <style>
+        .stage{
+            width: 800px;
+            height: 300px;
+            background-color:lightskyblue;
+            border: black 1px solid;
+        }
+        .ball{
+            height: 100px;
+            width: 100px;
+            border-radius: 50%;
+            background-color: orange;
+            position: relative;
+            animation: ping-pong 3s ease-in-out .5s infinite alternate ;
+        }
+        @keyframes ping-pong {
+            0%{
+                top: 0px;
+                left: 0px;
+                transform: scale(.5);
+            }
+
+            25%{
+                top: 200px;
+                background-color: red;
+                transform: scale(1);
+            }
+            50%{
+                top: 0px;
+                background-color:orange;
+                transform: scale(.5);
+            }
+            75%{
+                top: 200px;
+                background-color: red;
+                transform: scale(1);
+            }
+            100%{
+                top: 0px;
+                left:700px;
+                transform: scale(.5);
+                background-color: orange;
+            }
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>I am exploring Animation</h1>
+    <div class="stage">
+        <div class="ball"></div>
+    </div>
+    
+</body>
+</html>
